@@ -31,5 +31,5 @@ target_compile_options(main PRIVATE
     -fpeel-loops
     -fvect-cost-model=dynamic
 )
-
+ 
 target_link_libraries(main gtest gmock)
