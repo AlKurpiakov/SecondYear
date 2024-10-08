@@ -1,0 +1,2 @@
+E:/AnyDesk/w64devkit/bin/ar.exe qc ../../../lib/libgtest.a "CMakeFiles/gtest.dir/src/gtest-all.cc.obj"
+E:/AnyDesk/w64devkit/bin/ranlib.exe ../../../lib/libgtest.a
