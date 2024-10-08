@@ -26,8 +26,8 @@ public:
 
     T GetMax() const {
         return _max;
-    }//
-
+    }
+    
     T GetMin() const {
         return _min;
     }
