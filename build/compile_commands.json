@@ -1,13 +1,13 @@
 [
 {
   "directory": "E:/data/tetra/SecondYear/build",
-  "command": "E:/AnyDesk/w64devkit/bin/g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -o CMakeFiles/main.dir/main.cpp.obj -c E:/data/tetra/SecondYear/BeginTask-0/main.cpp",
+  "command": "E:/AnyDesk/w64devkit/bin/g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -ftree-vectorize -O3 -march=native -funroll-loops -fprefetch-loop-arrays -flto -o CMakeFiles/main.dir/main.cpp.obj -c E:/data/tetra/SecondYear/BeginTask-0/main.cpp",
   "file": "E:/data/tetra/SecondYear/BeginTask-0/main.cpp",
   "output": "CMakeFiles/main.dir/main.cpp.obj"
 },
 {
   "directory": "E:/data/tetra/SecondYear/build",
-  "command": "E:/AnyDesk/w64devkit/bin/g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -o CMakeFiles/main.dir/tests.cpp.obj -c E:/data/tetra/SecondYear/BeginTask-0/tests.cpp",
+  "command": "E:/AnyDesk/w64devkit/bin/g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -ftree-vectorize -O3 -march=native -funroll-loops -fprefetch-loop-arrays -flto -o CMakeFiles/main.dir/tests.cpp.obj -c E:/data/tetra/SecondYear/BeginTask-0/tests.cpp",
   "file": "E:/data/tetra/SecondYear/BeginTask-0/tests.cpp",
   "output": "CMakeFiles/main.dir/tests.cpp.obj"
 },
