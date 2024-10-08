@@ -31,7 +31,6 @@ public:
         return _min;
     }
 
-    
     bool IsContains(const T &elem) const {
         for (size_t i = 0; i < _count; ++i) {
             if (_array[i] == elem) return true;
