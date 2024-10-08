@@ -10,7 +10,7 @@ private:
     size_t _size;
     size_t _count;
     T _min;
-    T _max;
+    T _max;  
 public:
     ArrayHandler(size_t initial_size = 1000000)
         : _size(initial_size), _count(0), _min(std::numeric_limits<T>::max()), _max(std::numeric_limits<T>::min()) {
@@ -30,7 +30,6 @@ public:
     T GetMin() const {
         return _min;
     }
-
 
     bool IsContains(const T &elem) const {
         for (size_t i = 0; i < _count; ++i) {
