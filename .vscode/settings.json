@@ -2,6 +2,7 @@
     "cmake.sourceDirectory": "E:/data/tetra/SecondYear/BeginTask-0",
     "files.associations": {
         "limits": "cpp",
-        "xiosbase": "cpp"
+        "xiosbase": "cpp",
+        "cstdint": "cpp"
     }
 }
