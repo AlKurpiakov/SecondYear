@@ -28,6 +28,7 @@ public:
         return _max;
     }
     
+        
     T GetMin() const {
         return _min;
     }
