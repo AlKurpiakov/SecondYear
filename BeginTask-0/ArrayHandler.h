@@ -1,46 +1,46 @@
+#pragma once
+#include <cstdlib>
 #include <cstddef>
 #include <cstring>
-#include <cstdint>
-#include <limits>
+#include <limits> 
 
 template<typename T>
 class ArrayHandler {
 private:
-    T* _array;
-    size_t _size;
+    T _array[10000000];
     size_t _count;
-    T _min;
-    T _max;
-    
+    T _maxT;
+    T _minT;
+
 public:
-    ArrayHandler(size_t initial_size = 1000000)
-        : _size(initial_size), _count(0), _min(std::numeric_limits<T>::max()), _max(std::numeric_limits<T>::min()) {
-        _array = new T[_size];
+    ArrayHandler() : _count(0), _minT(std::numeric_limits<T>::max()), _maxT(std::numeric_limits<T>::min()) {
     }
 
     void AppendElem(T elem) {
         _array[_count++] = elem;
-        _min = (elem < _min) ? elem : _min;
-        _max = (elem > _max) ? elem : _max;
+        _minT = (elem < _minT) ? elem : _minT;
+        _maxT = (elem > _maxT) ? elem : _maxT;
+
     }
 
-    T GetMax() const {
-        return _max;
-    }
+    bool IsContains(const T* elem) const {
+        const T* end = _array + _count;
+        const T* ptr = _array;
 
-
-    T GetMin() const {
-        return _min;
-    }
-
-
-    bool IsContains(const T &elem) const {
-        for (size_t i = 0; i < _count; ++i) {
-            if (_array[i] == elem) return true;
+        while (ptr < end) {
+            if (*ptr == *elem) {
+                return true;
+            }
+            ++ptr;
         }
         return false;
     }
-    ~ArrayHandler() {
-        delete[] _array;
+
+    T GetMax() const {
+        return _maxT;
+    }
+
+    T GetMin() const {
+        return _minT;
     }
 };
