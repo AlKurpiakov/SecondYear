@@ -7,7 +7,7 @@
 template<typename T>
 class ArrayHandler {
 private:
-    T _array[1000000];
+    T _array[10000000];
     size_t _count;
     T _maxT;
     T _minT;
