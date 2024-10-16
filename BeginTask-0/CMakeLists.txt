@@ -20,6 +20,7 @@ target_compile_options(main PRIVATE
     -march=native        
     -funroll-loops                    
     -fomit-frame-pointer 
+    -finline-functions 
     -fno-stack-protector 
     -fno-exceptions      
     -fno-rtti            
