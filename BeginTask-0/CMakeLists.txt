@@ -17,8 +17,8 @@ add_executable(main main.cpp tests.cpp)
 target_compile_options(main PRIVATE
   -Ofast               
   -march=native        
-  -funroll-loops       
-  # -flto                
+  -funroll-loops
+  -finline-functions                
   -fomit-frame-pointer 
   -fno-stack-protector 
   -fno-exceptions      
