@@ -18,7 +18,7 @@ target_compile_options(main PRIVATE
   -Ofast               
   -march=native        
   -funroll-loops       
-  # -flto                
+  -finline-functions              
   -fomit-frame-pointer 
   -fno-stack-protector 
   -fno-exceptions      
