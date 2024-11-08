@@ -16,7 +16,7 @@ public:
     }
 
     ArrayHandler(size_t size) : _count(0), _minT(std::numeric_limits<T>::max()), _maxT(std::numeric_limits<T>::min()) {
-        _array = new T[_size];
+        _array = new T[size];
     } 
 
      void AppendElem(T elem) {
