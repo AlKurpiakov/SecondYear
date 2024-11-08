@@ -56,8 +56,8 @@ size_t BitField::GetLength() const {
 }
 
 BitField& BitField::operator=(const BitField& tmp) {
-    _sizeBit = tmp._sizeBit;
-    if (_sizeMem != tmp._sizeMem) {
+    if (_sizeBit != tmp._sizeBit) {
+        _sizeBit = tmp._sizeBit;
         _sizeMem = tmp._sizeMem;
         delete[] _mem;
         _mem = nullptr;
