@@ -4,30 +4,49 @@ class newclass
 {
 private:
     size_t _size;
-    vector<BitField> _arr;
+    BitField _arr;
     size_t _maxpow;
-    BitField _bf;
 
 public:
-    newclass(size_t maxpow, size_t size): _arr(size) , _bf(maxpow){
+    newclass(size_t maxpow, size_t size): _arr(maxpow * size){
         _maxpow = maxpow;
         _size = size;
-        for (int i = 0; i < size; i++){
-            _arr[i] = _bf;
-        }
     }
 
     void FillArray(){
         uint64_t tmp;
         int one = 1;
-        for (size_t i = 0; i < _size; i++){
-            cin >> tmp;
-            for (size_t j = 0; j < _maxpow; j++){
-                if (tmp & 1)
-                    _arr[i].SetBit(j);
-                tmp >> 1;
+        for (int j = 0; j <_size; j++){
+                cin >> tmp;
+            for (size_t i = 0; i < _maxpow; i++){
+                    if (tmp & 1)
+                        _arr.SetBit(i);
+                    tmp >> 1;
             }
         }
+    }
+
+    friend ostream& operator<<(ostream& os, const newclass& nc){
+        uint64_t tmp, tmp2;
+        for (int i = 0; i < nc._size; i++){
+            for (int j = i*nc._maxpow; j < (i+1)*nc._maxpow; j++ ){
+                if (1 & nc._arr.GetBit(j)){
+                    tmp2 += 1;
+                }
+                tmp2 << 1;
+            }
+            for (int k = 0; k < nc._maxpow; k++ ){
+                if (1 & tmp2){
+                    tmp += 1;
+                }
+                tmp << 1;
+            }
+
+            os << tmp << endl;
+        }
+
+        return os;
+
     }
 
 };

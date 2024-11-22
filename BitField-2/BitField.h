@@ -21,7 +21,7 @@ private:
     uint16_t* _mem;
     
     size_t GetMemIndex(size_t n)const;
-    uint16_t GetMask(size_t n);
+    uint16_t GetMask(size_t n) const;
 
 public:
     BitField(size_t sizeBit);
@@ -30,7 +30,7 @@ public:
 
     void SetBit(size_t n);
     void ClrBit(size_t n);
-    uint8_t GetBit(size_t n);
+    uint8_t GetBit(size_t n) const;
     size_t GetLength() const;
     
     bool operator==(const BitField& tmp) const;
