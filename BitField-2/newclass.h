@@ -21,7 +21,7 @@ public:
             for (size_t i = 0; i < _maxpow; i++){
                     if (tmp & 1)
                         _arr.SetBit(i);
-                    tmp >> 1;
+                    tmp = tmp >> 1;
             }
         }
     }
@@ -33,13 +33,14 @@ public:
                 if (1 & nc._arr.GetBit(j)){
                     tmp2 += 1;
                 }
-                tmp2 << 1;
+                tmp2 = tmp2 << 1;
             }
+
             for (int k = 0; k < nc._maxpow; k++ ){
                 if (1 & tmp2){
                     tmp += 1;
                 }
-                tmp << 1;
+                tmp = tmp << 1;
             }
 
             os << tmp << endl;
