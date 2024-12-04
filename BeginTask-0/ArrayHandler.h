@@ -49,8 +49,4 @@ public:
      T GetMin() const {
         return _minT;
     }
-
-     ~ArrayHandler() {
-         delete[] _array;
-    }
 }; 
